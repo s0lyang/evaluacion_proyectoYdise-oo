@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proy;
+
+/**
+ *
+ * @author Usuario
+ */
+import javax.swing.*;
+public class eva4 extends JFrame {
+    
+     public eva4(){
+         
+    setTitle("Ejercicio 4");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    JLabel numero=new JLabel ("Ingrese un número: ");
+    JLabel resultado=new JLabel();
+    JTextField deci=new JTextField(10);
+    JTextField num1=new JTextField(10);
+    JButton boton=new JButton("Calcular");
+    
+    boton.addActionListener(e-> {
+        try {
+            double num= Double.parseDouble();
+            suma +=numero;
+            i++;
+        }catch (NumberFormatException e){
+        resultado.setText("Error.");
+        }
+    });
+     
+}
+}
+
