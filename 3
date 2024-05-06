@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proy;
+
+/**
+ *
+ * @author Usuario
+ */
+import javax.swing.*;
+public class eva3 extends JFrame {
+    
+    public eva3 (){
+        setTitle("Ejercicio 2");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    JLabel numero=new JLabel ("Ingrese un número decimal: ");
+    JLabel resultado=new JLabel();
+    JButton boton=new JButton("Calcular");
+    
+    boton.addActionListener(e-> {
+            try {
+                int numero = Integer.parseInt(entrada);
+
+              
+            }catch (NumberFormatException ex){
+                resultado.setText("Error.");
+            }
+        });
+    JPanel panel = new JPanel();
+        panel.add(numero);
+        panel.add(num1);
+        panel.add(boton);
+        panel.add(resultado);
+
+        add(panel);
+        pack();
+        setLocationRelativeTo(null);
+    } 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            ejer7 ejercicio = new ejer7();
+            ejercicio.setVisible(true);
+        });
+    
+    
+    
+    }
+    
+}
