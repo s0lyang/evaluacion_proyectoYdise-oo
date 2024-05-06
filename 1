@@ -1,0 +1,53 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proy;
+
+/**
+ *
+ * @author Usuario
+ */
+import javax.swing.*;
+public class eva1 extends JFrame {
+    
+    public eva1() {
+    
+    setTitle("Ejercicio 1");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    JLabel numero=new JLabel("Ingrese un número: ");
+    JLabel factorial=new JLabel ();
+    JLabel resultado=new JLabel();
+    JTextField num1=new JTextField(10);
+    JButton boton=new JButton("Calcular");
+    
+    boton.addActionListener(e-> {
+            try{
+             int num=Integer.parseInt(num1.getText());
+             
+             }
+             resultado.setText("El resultado es: "+resultado);
+            }catch (NumberFormatException ex){
+                resultado.setText("Error.");
+            }
+        });
+
+    JPanel panel = new JPanel();
+        panel.add(numero);
+        panel.add(num1);
+        panel.add(factorial);
+        panel.add(boton);
+        panel.add(resultado);
+
+        add(panel);
+        pack();
+        setLocationRelativeTo(null);
+    } 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            eva1 ejercicio = new eva1();
+            ejercicio.setVisible(true);
+        });
+}
+
