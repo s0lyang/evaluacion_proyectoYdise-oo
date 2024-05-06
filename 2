@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proy;
+
+/**
+ *
+ * @author Usuario
+ */
+import javax.swing.*;
+public class eva2 extends JFrame {
+    
+    public eva2 () {
+        
+    setTitle("Ejercicio 2");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    JLabel decimal=new JLabel ("Ingrese un número decimal: ");
+    JLabel binario=new JLabel ();
+    JLabel resultado=new JLabel();
+    JTextField deci=new JTextField(10);
+    JTextField bina=new JTextField(10);
+    JButton boton=new JButton("Calcular");
+        
+       boton.addActionListener(e-> {
+            try {
+                int decimal = Integer.parseInt(decimal.getText());
+                String binary = Integer.toBinaryString(decimal);
+                bina.setText(binario);
+              
+            }catch (NumberFormatException ex){
+                resultado.setText("Error.");
+            }
+        });
+            
+    }
+}
